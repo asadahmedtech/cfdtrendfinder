@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>TrendFinder</title>
+	</head>
+
+	<body>
+		<h1>Site is Runing start the ML part.</h1>
+		<form action='/gettrend/' method='POST'>
+		{% csrf_token %}
+			<table>
+	      		<input name="keyword" id="keyword" type="text" placeholder="Enter the keyword to find the tweet">
+	      		<input type="submit" name="Find!">
+	      	</table>
+        </form>
+	</body>
+</html>
