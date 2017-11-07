@@ -1,0 +1,7 @@
+Python 2.7
+Numpy
+Scipy
+Scikit-learn
+Tweepy
+NLTK
+Django 1.11
