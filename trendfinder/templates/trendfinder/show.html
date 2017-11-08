@@ -4,12 +4,32 @@
 	</head>
 
 	<body>
-		<h1>Site is Runing start the ML part.</h1>
+		<h1>People Opinion for your Tweet</h1>
+		<br>
+		<h2>Top 3 recent tweets for {{keyword}}</h2>
 		{% for d in data %}
 			<tr>
 				<td>{{d}}</td>
 				<br>
 			</tr>
 		{% endfor %}
+		<h2>People's Sentiment is</h2>
+		{% for s in sentiment %}
+			<tr>
+				<td>{{s}}</td>
+				<br>
+			</tr>
+		{% endfor %}
+
+		<br>
+		<br>
+		<h2>Find for more keywords</h2>
+		<form action='/gettrend/' method='POST'>
+		{% csrf_token %}
+			<table>
+	      		<input name="keyword" id="keyword" type="text" placeholder="Enter the keyword to find the tweet">
+	      		<input type="submit" name="Find!">
+	      	</table>
+        </form>
 	</body>
 </html>
