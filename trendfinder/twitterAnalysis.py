@@ -57,11 +57,11 @@ def getRes(keyword):
 
                 t.append(tweet.text)
                 i+=1
-        if s.sentiment(tweet.text)=='pos':
-            print 'pos'
+        a = s.sentiment(tweet.text)
+        print a
+        if a[0] =='pos':
             pos+=1
         else:
-            print 'neg'
             neg+=1
     data = tuple()
     data += (t,)

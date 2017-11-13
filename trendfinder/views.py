@@ -6,7 +6,7 @@ from . import twitterAnalysis
 # Create your views here.
 def get_trend_from_twitter(keyword):
 	tweets,pos,neg = twitterAnalysis.getRes(keyword)
-	data,sentiment = [tweets[0],tweets[1],tweets[2]],['Negative Sentiment is '+str(pos),'Positive Sentiment is '+str(neg)]
+	data,sentiment = [tweets[0],tweets[1],tweets[2]],['Negative Sentiment is '+str(neg),'Positive Sentiment is '+str(pos)]
 	return (data,sentiment)
 def index(request):
 	return render(request, 'trendfinder/index.html')
